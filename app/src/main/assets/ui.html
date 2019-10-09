@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        div {
+            text-align: center;
+            font-size: 3em;
+        }
+    </style>
+    <script>
+        var face = ['clubs', 'diamonds', 'hearts', 'spades'];
+        var value = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
+
+        function addNode(num) {
+            num = num || 1;
+            for (var i=0; i<parseInt(num); i++) {
+                let element = document.createElement('img');
+                element.src = value[Math.floor(Math.random()*value.length)]+"_of_"+face[Math.floor(Math.random()*face.length)]+".png";
+                element.style = "width: 10%; height: 10%";
+                document.body.append(element);
+            }
+            return num;
+        }
+    </script>
+</head>
+<body>
+<div>
+    Draw a card
+</div>
+</body>
+</html>
